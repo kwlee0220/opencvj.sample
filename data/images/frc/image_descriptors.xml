@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<images>
+  <image>
+    <id>food1</id>
+    <file>food1.jpg</file>
+    <corners>0 0 479 0 479 383 0 383</corners></image>
+  <image>
+    <id>IPadRevolution</id>
+    <file>IPadRevolution.jpg</file>
+    <corners>0 0 272 0 272 184 0 184</corners></image>
+  <image>
+    <id>SNSD1</id>
+    <file>SNSD1.jpg</file>
+    <corners>0 0 433 0 433 288 0 288</corners></image>
+  <image>
+    <id>time-100401</id>
+    <file>time-100401.jpg</file>
+    <corners>0 0 426 0 426 319 0 319</corners></image>
+  <image>
+    <id>united-colors-of-benetton</id>
+    <file>united-colors-of-benetton.jpg</file>
+    <corners>0 0 514 0 514 337 0 337</corners></image>
+  <image>
+    <id>stop</id>
+    <file>stop.jpg</file>
+    <corners>0 0 447 0 447 335 0 335</corners></image>
+  <image>
+    <id>app</id>
+    <file>app.jpg</file>
+    <corners>0 0 400 0 400 300 0 300</corners></image>
+  <image>
+    <id>Thing</id>
+    <file>Thing.jpg</file>
+    <corners>0 0 400 0 400 300 0 300</corners></image>
+  <image>
+    <id>coffee_cup</id>
+    <file>coffee_cup.jpg</file>
+    <corners>0 0 258 0 258 194 0 194</corners></image>
+  <image>
+    <id>transformer3</id>
+    <file>transformer3.jpg</file>
+    <corners>0 0 331 0 331 285 0 285</corners></image>
+  <image>
+    <id>book1</id>
+    <file>book1.jpg</file>
+    <corners>0 0 382 0 382 429 0 429</corners></image>
+  <image>
+    <id>book2</id>
+    <file>book2.jpg</file>
+    <corners>0 0 290 0 290 392 0 392</corners></image>
+</images>

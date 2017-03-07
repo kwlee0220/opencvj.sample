@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<images>
+	<image>
+		<id>maze_01</id>
+		<file>maze_01.jpg</file>
+		<corners>0 0 862 0 862 638 0 638</corners>
+	</image>
+	<image>
+		<id>maze_02</id>
+		<file>maze_02.jpg</file>
+		<corners>0 0 863 0 863 637 0 637</corners>
+	</image>
+	<image>
+		<id>maze_03</id>
+		<file>maze_03.jpg</file>
+		<corners>0 0 861 0 861 636 0 636</corners>
+	</image>
+	<image>
+		<id>maze_04</id>
+		<file>maze_04.jpg</file>
+		<corners>0 0 863 0 863 637 0 637</corners>
+	</image>
+	<image>
+		<id>maze_05</id>
+		<file>maze_05.jpg</file>
+		<corners>0 0 862 0 862 636 0 636</corners>
+	</image>
+	<image>
+		<id>maze_06</id>
+		<file>maze_06.jpg</file>
+		<corners>0 0 861 0 861 636 0 636</corners>
+	</image>
+	<image>
+		<id>maze_07</id>
+		<file>maze_07.jpg</file>
+		<corners>0 0 863 0 863 637 0 637</corners>
+	</image>
+	<image>
+		<id>maze_08</id>
+		<file>maze_08.jpg</file>
+		<corners>0 0 861 0 861 637 0 637</corners>
+	</image>
+	<image>
+		<id>maze_09</id>
+		<file>maze_09.jpg</file>
+		<corners>0 0 863 0 863 637 0 637</corners>
+	</image>
+	<image>
+		<id>maze_10</id>
+		<file>maze_10.jpg</file>
+		<corners>0 0 862 0 862 636 0 636</corners>
+	</image>
+</images>

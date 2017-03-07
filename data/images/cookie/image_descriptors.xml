@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<images>
+	<image>
+		<id>BigPie</id>
+		<file>BigPie.jpg</file>
+		<corners>34 19 603 18 616 452 34 467</corners>
+	</image>
+	<image>
+		<id>CouqueDasse</id>
+		<file>CouqueDasse.jpg</file>
+		<corners>35 12 616 26 632 452 18 463</corners>
+	</image>
+</images>

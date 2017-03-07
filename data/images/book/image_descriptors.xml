@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<images>
+	<image>
+		<id>collective_intelligence_0001</id>
+		<file>collective_intelligence_0001.jpg</file>
+		<corners>50 32 519 56 571 407 16 449</corners>
+	</image>
+	<image>
+		<id>multiagent_systems_001</id>
+		<file>multiagent_systems_001.jpg</file>
+		<corners>91 6 603 39 598 443 64 433</corners>
+	</image>
+	<image>
+		<id>writing_effective_use_case</id>
+		<file>writing_effective_use_case.jpg</file>
+		<corners>16 35 565 13 573 451 26 476</corners>
+	</image>
+	<image>
+		<id>WimpyKid01</id>
+		<file>WimpyKid01_front.jpg</file>
+		<corners>40 80 603 42 619 443 52 449</corners>
+	</image>
+	<image>
+		<id>CharlottesWeb</id>
+		<file>CharlottesWeb_front.jpg</file>
+		<corners>93 91 581 65 597 401 102 417</corners>
+	</image>
+</images>
