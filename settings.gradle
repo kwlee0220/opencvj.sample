@@ -1,6 +1,7 @@
 rootProject.name = 'opencvj.sample'
 
-['utils', 'event', 'planet', 'camus.model', 'opencvj', 'opencvj.openni2'].each {
+['utils', 'event', 'async', 'planet', 'camus.model',
+	'etri.services', 'opencvj', 'opencvj.openni2'].each {
 	include ":$it"
 	project(":$it").projectDir = file("../$it")
 }

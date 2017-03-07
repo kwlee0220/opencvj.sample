@@ -17,7 +17,14 @@ repositories {
 }
 
 dependencies {
-	childProjects.values().each { compile it }
+	compile project(':utils')
+	compile project(':event')
+	compile project(':async')
+	compile project(':planet')
+	compile project(':camus.model')
+	compile project(':etri.services')
+	compile project(':opencvj')
+	compile project(':opencvj.openni2')
 }
 
 task sourceJar(type: Jar) {
