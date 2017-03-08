@@ -58,7 +58,7 @@ public class TestMarkerDetector {
         
         // creates target test object and dependent ones
         //
-        OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
+		OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
 		MarkerDetector detector = MarkerDetector.create(OpenCvJSystem.getOpenCvJLoader(), markerConfig);
     	
 		Mat image = new Mat();

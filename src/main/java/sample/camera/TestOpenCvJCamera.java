@@ -30,7 +30,7 @@ public class TestOpenCvJCamera {
 	public static final void main(String[] args) throws Exception {
     	Log4jConfigurator.configure("log4j.properties");
     	
-    	CommandLineParser parser = new CommandLineParser("test_opencv_camera ");
+    	CommandLineParser parser = new CommandLineParser("opencv_camera ");
     	parser.addArgOption("home", "directory", "home directory");
     	parser.addArgOption("camera", "config path", "target camera config path");
     	parser.addOption(new Option("h", "usage help"));
@@ -49,13 +49,13 @@ public class TestOpenCvJCamera {
 	    
         TestOpenCvJ.initialize(homeDir);
         
-//        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
-        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "xtion/depth")); 
+        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
+//        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "xtion/depth")); 
 //      Config config = OpenCvJSystem.getConfig(cl.getOptionValue("camera", "xtion.color"));
         
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(config);
+		OpenCvJCamera camera = OpenCvJCamera.create(config);
 
 		OpenCvView window = OpenCvViewManager.getView("camera", camera.getSize());
 

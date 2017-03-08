@@ -51,7 +51,7 @@ public class TestBasicOpenCvJCamera {
         
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(config);
+		OpenCvJCamera camera = OpenCvJCamera.create(config);
 
 		Mat image = new Mat();
 

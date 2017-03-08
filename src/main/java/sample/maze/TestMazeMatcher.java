@@ -60,7 +60,7 @@ public class TestMazeMatcher {
         
         // creates target test object and dependent ones
         //
-        OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
+		OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
 		MazeMatcher matcher = MazeMatcher.create(mazeConfig);
     	
 		Mat image = new Mat();
