@@ -58,7 +58,7 @@ public class TestImageThreshold {
         
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
+		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
 		ImageThreshold threshold = OpenCvJSystem.createImageThreshold(thresholdConfig);
 //		ImageThreshold threshold = new AdaptiveImageThreshold();
     	

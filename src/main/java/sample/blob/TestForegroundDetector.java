@@ -60,7 +60,7 @@ public class TestForegroundDetector {
         
         // creates target test object and dependent ones
         //
-        OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
+        OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
         ForegroundDetector detector = OpenCvJSystem.createForegroundDetector(detectorConfig);
 		
 		Point[] corners = null;

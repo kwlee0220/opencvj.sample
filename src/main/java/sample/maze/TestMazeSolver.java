@@ -67,7 +67,7 @@ public class TestMazeSolver {
         
         // creates target test object and dependent ones
         //
-        OpenCvJCameraFactory cameraFact = OpenCvJCameraFactory.create(cameraConfig);
+        OpenCvJCameraFactory cameraFact = OpenCvJSystem.createOpenCvJCameraFactory(cameraConfig);
 		OpenCvBeamProjector prj = OpenCvBeamProjector.create(prjConfig);
 		CameraProjectorComposite cpc = CameraProjectorComposite.create(cameraFact, prj, cpcConfig);
 		MazeSolver solver = MazeSolver.create(cpc, mazeConfig);

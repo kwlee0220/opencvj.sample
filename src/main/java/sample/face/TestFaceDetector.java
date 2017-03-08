@@ -56,7 +56,7 @@ public class TestFaceDetector {
 
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
+		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
 		SimpleOpenCvJFaceDetector detector = SimpleOpenCvJFaceDetector.create(OpenCvJSystem.getOpenCvJLoader(),
 																				faceConfig);
     	detector.setCascadeFile(new File(OpenCvJSystem.getConfigDir(),

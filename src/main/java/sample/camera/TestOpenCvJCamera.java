@@ -55,7 +55,7 @@ public class TestOpenCvJCamera {
         
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJCamera.create(config);
+		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(config);
 
 		OpenCvView window = OpenCvViewManager.getView("camera", camera.getSize());
 

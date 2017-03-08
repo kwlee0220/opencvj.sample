@@ -57,7 +57,7 @@ public class TestBackgroundModel {
         
         // creates target test object and dependent ones
         //
-		OpenCvJCamera camera = OpenCvJCamera.create(cameraConfig);
+		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(cameraConfig);
         BackgroundModel bgModel = OpenCvJSystem.getBackgroundModel(bgModelConfig);
     	
 		Mat image = new Mat();

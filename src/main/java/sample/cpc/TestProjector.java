@@ -53,11 +53,8 @@ public class TestProjector {
 
         TestOpenCvJ.initialize(homeDir);
         
-        ConfigNode camConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui")); 
-        
-        // creates target test object and dependent ones
-        //
-		OpenCvJCamera camera = OpenCvJCamera.create(camConfig);
+        ConfigNode camConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
+		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(camConfig);
 		
 		Mat image = new Mat();
 
