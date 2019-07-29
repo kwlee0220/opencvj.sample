@@ -38,7 +38,7 @@ public class TestBasicOpenCvJCamera {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -47,7 +47,7 @@ public class TestBasicOpenCvJCamera {
 
 		OpenCvJSystem.initialize(homeDir, null);
         
-        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui")); 
+        ConfigNode config = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui")); 
         
         // creates target test object and dependent ones
         //

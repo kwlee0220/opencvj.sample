@@ -44,7 +44,7 @@ public class TestMarkerDetector {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -53,8 +53,8 @@ public class TestMarkerDetector {
 
 		TestOpenCvJ.initialize(homeDir);
         
-		ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
-		ConfigNode markerConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("marker", "marker"));
+		ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui"));
+		ConfigNode markerConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("marker").getOrElse("marker"));
         
         // creates target test object and dependent ones
         //

@@ -43,7 +43,7 @@ public class TestImageThreshold {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -52,9 +52,9 @@ public class TestImageThreshold {
 	    
 		TestOpenCvJ.initialize(homeDir);
         
-        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui")); 
-        ConfigNode thresholdConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("threshold",
-        																"board_tracker/board.threshold")); 
+        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui")); 
+        ConfigNode thresholdConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("threshold")
+        															.getOrElse("board_tracker/board.threshold")); 
         
         // creates target test object and dependent ones
         //

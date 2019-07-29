@@ -41,7 +41,7 @@ public class TestBackgroundModel {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -52,8 +52,8 @@ public class TestBackgroundModel {
         
 //		ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "xtion.depth"));
 //		ConfigNode bgModelConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("bgmodel", "depth_bgmodel"));
-		ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));  
-		ConfigNode bgModelConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("bgmodel", "color_bgmodel")); 
+		ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui"));  
+		ConfigNode bgModelConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("bgmodel").getOrElse("color_bgmodel")); 
         
         // creates target test object and dependent ones
         //

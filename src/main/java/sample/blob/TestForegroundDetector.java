@@ -43,7 +43,7 @@ public class TestForegroundDetector {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -52,10 +52,10 @@ public class TestForegroundDetector {
 
 		TestOpenCvJ.initialize(homeDir);
 
-        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
-//        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "xtion/depth")); 
-        ConfigNode detectorConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("detector",
-        																"color_bgmodel")); 
+        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui"));
+//        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera", "xtion/depth")); 
+        ConfigNode detectorConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("detector")
+        															.getOrElse("color_bgmodel")); 
 //																		"mouse/fingertip/hand")); 
         
         // creates target test object and dependent ones

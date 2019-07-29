@@ -44,7 +44,7 @@ public class TestProjector {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -53,7 +53,7 @@ public class TestProjector {
 
         TestOpenCvJ.initialize(homeDir);
         
-        ConfigNode camConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui"));
+        ConfigNode camConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui"));
 		OpenCvJCamera camera = OpenCvJSystem.createOpenCvJCamera(camConfig);
 		
 		Mat image = new Mat();

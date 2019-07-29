@@ -46,7 +46,7 @@ public class TestMazeMatcher {
 	    	cl.exitWithUsage(0);
 	    }
 
-	    String homeDirPath = cl.getOptionValue("home", ".");
+	    String homeDirPath = cl.getOptionString("home").getOrElse(".");
 	    File homeDir = new File(homeDirPath).getCanonicalFile();
         if ( !homeDir.isDirectory() ) {
             System.err.println("Invalid home directory: path=" + homeDirPath);
@@ -55,8 +55,8 @@ public class TestMazeMatcher {
 
         TestOpenCvJ.initialize(homeDir);
         
-        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("camera", "highgui")); 
-        ConfigNode mazeConfig = OpenCvJSystem.getConfigNode(cl.getOptionValue("maze", "maze")); 
+        ConfigNode cameraConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("camera").getOrElse("highgui")); 
+        ConfigNode mazeConfig = OpenCvJSystem.getConfigNode(cl.getOptionString("maze").getOrElse("maze")); 
         
         // creates target test object and dependent ones
         //
