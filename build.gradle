@@ -1,5 +1,4 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+apply plugin: 'java-library'
 
 group = 'etri'
 version = '1.0'
@@ -13,14 +12,14 @@ repositories {
 }
 
 dependencies {
-	compile project(':utils')
-	compile project(':event')
-	compile project(':async')
-	compile project(':planet')
-	compile project(':camus.model')
-	compile project(':etri.services')
-	compile project(':opencvj')
-	compile project(':opencvj.openni2')
+	implementation project(':utils')
+	implementation project(':event')
+	implementation project(':async')
+	implementation project(':planet')
+	implementation project(':camus.model')
+	implementation project(':etri.services')
+	implementation project(':opencvj')
+	implementation project(':opencvj.openni2')
 }
 
 task sourceJar(type: Jar) {
@@ -63,7 +62,12 @@ eclipse {
 				}
 				cp.entries.each { entry ->
 					if ( entry.kind == 'src' && entry.hasProperty('output') ) {
-						entry.output = 'classes'
+						if ( entry.path.startsWith("src/test/") ) {
+							entry.output = 'test_classes'
+						}
+						else {
+							entry.output = 'classes'
+						}
 					}
 				}
 			}
