@@ -3,12 +3,11 @@ package sample.blob;
 import java.io.File;
 import java.util.List;
 
-import camus.service.geo.Point;
-import camus.service.image.Color;
-
 import org.apache.commons.cli.Option;
 import org.opencv.core.Mat;
 
+import camus.service.geo.Point;
+import camus.service.image.Color;
 import opencvj.Mats;
 import opencvj.OpenCvJSystem;
 import opencvj.OpenCvJUtils;
@@ -21,7 +20,6 @@ import utils.CommandLine;
 import utils.CommandLineParser;
 import utils.FramePerSecondMeasure;
 import utils.Initializable;
-import utils.Log4jConfigurator;
 import utils.config.ConfigNode;
 
 
@@ -31,8 +29,6 @@ import utils.config.ConfigNode;
  */
 public class TestMarkerDetector {
 	public static final void main(String[] args) throws Exception {
-    	Log4jConfigurator.configure("log4j.properties");
-    	
     	CommandLineParser parser = new CommandLineParser("test_marker_detector");
     	parser.addArgOption("home", "directory", "home directory");
     	parser.addArgOption("camera", "config path", "target camera config path");

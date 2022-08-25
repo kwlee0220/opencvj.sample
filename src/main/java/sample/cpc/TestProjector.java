@@ -2,15 +2,13 @@ package sample.cpc;
 
 import java.io.File;
 
-import camus.service.geo.Point;
-import camus.service.geo.Size2d;
-import camus.service.image.Color;
-
-import etri.service.image.BufferedImageConvas;
-
 import org.apache.commons.cli.Option;
 import org.opencv.core.Mat;
 
+import camus.service.geo.Point;
+import camus.service.geo.Size2d;
+import camus.service.image.Color;
+import etri.service.image.BufferedImageConvas;
 import opencvj.Mats;
 import opencvj.OpenCvJSystem;
 import opencvj.camera.OpenCvJCamera;
@@ -20,7 +18,6 @@ import utils.CommandLine;
 import utils.CommandLineParser;
 import utils.FramePerSecondMeasure;
 import utils.Initializable;
-import utils.Log4jConfigurator;
 import utils.config.ConfigNode;
 
 
@@ -32,8 +29,6 @@ public class TestProjector {
 	private static final int COUNT = 200;
 	
 	public static final void main(String[] args) throws Exception {
-    	Log4jConfigurator.configure("log4j.properties");
-    	
     	CommandLineParser parser = new CommandLineParser("projector ");
     	parser.addArgOption("home", "directory", "home directory");
     	parser.addArgOption("camera", "config path", "target camera config path");

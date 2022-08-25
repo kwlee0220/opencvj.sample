@@ -4,14 +4,13 @@ import java.io.File;
 import java.util.List;
 import java.util.Set;
 
-import camus.service.image.Color;
-
 import org.apache.commons.cli.Option;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 
 import com.google.common.collect.Sets;
 
+import camus.service.image.Color;
 import opencvj.OpenCvJSystem;
 import opencvj.OpenCvView;
 import opencvj.OpenCvViewManager;
@@ -23,7 +22,6 @@ import utils.CommandLine;
 import utils.CommandLineParser;
 import utils.FramePerSecondMeasure;
 import utils.Initializable;
-import utils.Log4jConfigurator;
 import utils.config.ConfigNode;
 
 
@@ -33,8 +31,6 @@ import utils.config.ConfigNode;
  */
 public class TestMazeMatcher {
 	public static final void main(String[] args) throws Exception {
-    	Log4jConfigurator.configure("log4j.properties");
-    	
     	CommandLineParser parser = new CommandLineParser("test_maze_matcher ");
     	parser.addArgOption("home", "directory", "home directory");
     	parser.addArgOption("camera", "config path", "target camera config path");
